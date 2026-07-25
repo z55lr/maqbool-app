@@ -337,21 +337,8 @@ function renderFavorites(){
 }
 
 /* =========================================================
-   UPDATE CHECK (mirrors `update` node + SharedPreferences flag)
+   UPDATE CHECK - DISABLED FOR THE WEB VERSION
+   الموقع لا يعرض إشعارات تحديث تطبيق الأندرويد إطلاقاً.
+   لو حبيت تفعّلها مرة ثانية بالمستقبل، رجّع الكود القديم من هذا التعليق.
    ========================================================= */
-db.ref('update').limitToLast(1).once('value').then(snap=>{
-  let data = null;
-  snap.forEach(c=>{ data = c.val(); });
-  if(!data) return;
-  const sig = String(data.if_elsenum||'');
-  const lastSeen = localStorage.getItem('maqbool_last_update')||'';
-  if(sig === '1' && lastSeen !== sig){
-    localStorage.setItem('maqbool_last_update', sig);
-    document.getElementById('updateVersion').textContent = 'رقم الإصدار الجديد : ' + (data.Version_number||'');
-    document.getElementById('updateMsg').textContent = data.Message || '';
-    document.getElementById('btnUpdateDownload').onclick = ()=>{
-      if(data.Update_link) window.open(data.Update_link, '_blank');
-    };
-    openSheet('overlayUpdate');
-  }
-}).catch(()=>{});
+// (متعمد تركه فاضي)
