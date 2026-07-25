@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>مقبول | Maqbool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <button class="icon-btn ghost" id="btnFavTop" title="المفضلة">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.2 2 4.5 5.6 4c2-.3 3.9.7 5 2.3 1.1-1.6 3-2.6 5-2.3 3.6.5 5.2 4.2 3.6 7.7C19.5 16.4 12 21 12 21Z" stroke-width="1.7" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="brand">
+      <div class="brand-text">
+        <p class="hi">أهلا بك في</p>
+        <p class="name">مقبـول</p>
+      </div>
+      <div class="brand-badge">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V7a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HOME SCREEN ============ -->
+  <div class="screen active" id="screen-home">
+
+    <div class="poster">
+      <div class="cap">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 2 8l10 5 8-4v6" stroke="#FF5722" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" stroke="#FF5722" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <b>دليلك للقبول المركزي</b>
+        <span>أدخل معلوماتك لمعرفة التخصصات والجامعات المتاحة لك على أساس معدلك</span>
+      </div>
+    </div>
+
+    <div class="section-title">المعلومـات المطلوبة</div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>ألاسم الثلاثي أو الرباعي</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke-width="1.6"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <input class="field-input" id="inpName" placeholder="أكتب أسمك هنا!">
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>المحافظة أو مكان السكن</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke-width="1.6"/></svg>
+      </div>
+      <div class="field-value placeholder" id="valCity">أضغط على زر الاضافة وأختر محافظتك!</div>
+      <button class="chip-btn" id="btnCity">أختر مكان السكن
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>أختر حدود المعدل</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h6" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div class="field-value placeholder" id="valDegreeRange">أضغط على زر الاضافة وأختر حدود معدلك!</div>
+      <button class="chip-btn" id="btnDegreeRange">أختيار الحدود
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>المعدل</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 7l10 10M8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm8 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke-width="1.6"/></svg>
+      </div>
+      <input class="field-input" id="inpDegree" placeholder="أكتب معدلك هنا" inputmode="decimal">
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-secondary" id="btnExit">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="btn btn-primary" id="btnEnter">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        رؤية القبولات
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ RESULTS SCREEN ============ -->
+  <div class="screen" id="screen-results">
+    <div class="header-row">
+      <button class="icon-btn" id="btnBackResults">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="#FF5722" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <h1>الجامعات الممكن أتقبلك</h1>
+    </div>
+
+    <div class="searchbar">
+      <input id="inpSearch" placeholder="أبحث عن أسم المحافظة او المعدل او القسم ...">
+      <button id="btnSearch">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="result-summary" id="resultSummary"></div>
+    <div class="cards" id="resultCards"></div>
+  </div>
+
+  <!-- ============ FAVORITES SCREEN ============ -->
+  <div class="screen" id="screen-favorites">
+    <div class="header-row">
+      <button class="icon-btn" id="btnBackFav">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="#FF5722" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <h1>المفضلـة</h1>
+    </div>
+    <div class="cards" id="favCards"></div>
+  </div>
+
+</div>
+
+<!-- ===== City sheet ===== -->
+<div class="overlay" id="overlayCity">
+  <div class="sheet">
+    <h3>أختر المحافظة</h3>
+    <div id="cityOptions"></div>
+  </div>
+</div>
+
+<!-- ===== Degree range sheet ===== -->
+<div class="overlay" id="overlayDegree">
+  <div class="sheet">
+    <h3>أختر المعدل</h3>
+    <div id="degreeOptions"></div>
+  </div>
+</div>
+
+<!-- ===== Update sheet ===== -->
+<div class="overlay" id="overlayUpdate">
+  <div class="sheet update-card">
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    <h3>معلومات حول التحديث</h3>
+    <div class="ver" id="updateVersion">رقم الإصدار الجديد : 2.0</div>
+    <div class="msg" id="updateMsg"></div>
+    <button class="btn btn-primary" id="btnUpdateDownload" style="width:100%;">تحميل التحديث</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Firebase (compat) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
