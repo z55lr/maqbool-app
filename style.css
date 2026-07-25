@@ -35,7 +35,7 @@
   .brand{display:flex; align-items:center; gap:10px;}
   .brand-badge{
     width:44px;height:44px;border-radius:14px;background:var(--accent);
-    display:flex;align-items:center;justify-content:center;
+    display:none;align-items:center;justify-content:center;
     box-shadow:0 6px 18px rgba(255,87,34,.35);
     flex-shrink:0;
   }
